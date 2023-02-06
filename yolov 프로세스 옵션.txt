@@ -1,0 +1,34 @@
+--weights :  초기 가중치 경로(기본값: 'yolo7.pt')
+--cfg : model.yaml 경로(기본값: '')
+--data : data.yaml 경로(기본값: 'data/coco.yaml')
+--hyp : 하이퍼파라미터 경로(기본값: 'data/hyp.scratch.p5.yaml')
+--epochs : 훈련 데이터를 순환하는 횟수(기본값 값: 300)
+--batch-size : 모든 GPU의 총 배치 크기(기본값: 16)
+--img-size : 이미지 크기(기본값: [640, 640])
+--rect : 비정방형 훈련 옵션 사용 여부
+--resume : 가장 최근 훈련 재개(기본값: False)
+--nosave : 최종 체크포인트만 저장
+--notest : 만 최종 에포크 테스트
+--noautoanchor : 자동 앵커 검사 비활성화
+--evolve : 하이퍼파라미터 진화
+--bucket : gsutil 버킷(기본값: '')
+--cache-images : 빠른 훈련을 위한 캐시 이미지 , 훈련
+--image-weights을 위한 가중 이미지 선택 사용
+--device : cuda 장치, 즉 0 또는 0,1,2,3 또는 cpu(기본값: '')
+--multi-scale : 다양한 img-size +/- 50%%
+--single-cls : 훈련 다중 클래스 데이터를 단일 클래스
+--adam로 사용 : torch.optim.Adam() 최적화 프로그램
+--sync-bn사용 : SyncBatchNorm 사용, DDP 모드에서만 사용 가능
+--local_rank : DDP 매개변수, 수정하지 않음(기본값: -1)
+--workers : 최대 데이터로더 작업자 수(기본값: 8)
+--project : 저장 위치 프로젝트/이름(기본값: 'runs/train')
+--entity : W&B 엔터티(기본값: None)
+--name : 프로젝트/이름에 저장(기본값: 'exp')
+--exist-ok : 기존 프로젝트/이름 확인, 증분하지 않음
+--quad : 쿼드 데이터 로더
+--linear-lr : 선형 LR
+--label-smoothing : 레이블 스무딩 엡실론(기본값: 0.0)
+--upload_dataset : W&B 아티팩트 테이블로 데이터 세트 업로드 , W&B
+--bbox_interval에 대한 경계 상자 이미지 로깅 간격 설정(기본값: -1)
+--save_period : 모든 "save_period" 에포크 후 로그 모델(기본값: -1)
+--artifact_alias : 데이터 세트 아티팩트 버전 사용(기본값: "latest")
